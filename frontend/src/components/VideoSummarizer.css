@@ -1,0 +1,308 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(90deg, #0056b3, #007bff); 
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto; 
+  max-width: 90%; 
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow for pop */
+  letter-spacing: 1px; /* Slightly spaced letters for a modern look */
+}
+
+/* Optional: Add animation for entry */
+header {
+  animation: fadeIn 1s ease-out; /* Smooth fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Main Container Styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Space between sections */
+  padding: 60px 20px; /* Generous padding for spacing */
+  background: linear-gradient(135deg, #363737, #ffffff); /* Soft gradient for a clean look */
+  border-radius: 16px; /* Increased roundness for a smooth appearance */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+  margin: 80px auto; /* Centers the container on the page */
+  max-width: 1200px; /* Restricts width for better layout on large screens */
+  width: 90%; /* Adjusts for smaller screens */
+  border: 2px solid #e0f7fa; /* Optional border for a subtle outline */
+}
+
+/* Optional: Add hover effect for interactive sections */
+.main-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: scale(1.01); /* Slight scaling for a responsive feel */
+  transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+}
+
+
+/* Form and Output Container Wrapper */
+.form-output-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adds space between form and output containers */
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Output Container Styles */
+.form-container {
+
+  background-color: #fff;
+  display: flexbox;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; /* Set a max width for better alignment */
+}
+
+/* Form Container Styles */
+.form-container input[type="text"] {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;/* Adds space between input fields and the button */
+}
+
+.form-container h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-container label {
+  margin-bottom: 8px; /* Add spacing between labels and inputs */
+  display: block; /* Ensures proper alignment */
+}
+
+.form-container select,
+.form-container input[type="text"],
+.form-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* Slightly rounded corners */
+  padding: 10px 15px; /* Reduced padding for smaller size */
+  font-size: 0.9rem; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  display: block;
+  width: auto; /* Button width adjusts to content */
+  margin: 10px auto; /* Adds spacing and centers the button */
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Output Container Styles */
+.output-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; /* Set a max width for better alignment */
+}
+
+.output-container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.output-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-output-wrapper {
+    flex-direction: column;
+    gap: 30px; /* Adds space between sections on smaller screens */
+  }
+
+  .form-container,
+  .output-container {
+    width: 100%;
+    max-width: none; /* Remove max-width for better adaptability */
+  }
+}
+
+/* Styling for the output-images section */
+.output-images {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+/* Styling the button to fetch images */
+.output-images button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.output-images button:hover {
+  background-color: #0056b3;
+}
+
+/* Grid container for images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Styling individual images */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+  transform: scale(2);
+}
+
+.output-images1 {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Styling the button to fetch images */
+.output-images1 button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.output-images1 button:hover {
+  background-color: #0056b3;
+}
+.thumbnail-generation button {  /* Style the "Create Thumbnail" button */
+  background-color: #695FEF; /* Example - use your preferred color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.thumbnail-generation button:hover {
+  background-color: #4B38E0; /* Example - darker shade on hover */
+}
+
+.thumbnail-generation button:disabled { /* Style for disabled state */
+  background-color: #ccc;
+  cursor: default;
+}
+
+/* Style the AI Control Center buttons */
+.thumbnail-generation h2 {
+  color: #333; /* Or your preferred color */
+}
+
+.thumbnail-generation button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(105, 95, 239, 0.5); /* Add a subtle glow */
+}
+
+.thumbnail-generation div button {  /* For "Describe", "Iterate", "URL" buttons */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 8px 16px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.thumbnail-generation div button:hover {
+  background-color: #e0e0e0;
+}
+
+.thumbnail-generation div button.active { /* Style the active button */
+  background-color: #695FEF;
+  color: white;
+  border-color: #695FEF;
+}
+
+
+
